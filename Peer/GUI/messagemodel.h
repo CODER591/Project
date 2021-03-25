@@ -2,7 +2,7 @@
 #define MESSAGEMODEL_H
 
 #include <QAbstractListModel>
-#include "GUI/messageitem.h"
+#include "messageitem.h"
 
 class MessageModel : public QAbstractListModel
 {

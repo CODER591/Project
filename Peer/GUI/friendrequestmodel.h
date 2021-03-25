@@ -2,7 +2,7 @@
 #define FRIENDREQUESTMODEL_H
 
 #include <QAbstractListModel>
-#include "GUI/friendrequestitem.h"
+#include "friendrequestitem.h"
 
 class FriendRequestModel : public QAbstractListModel
 {

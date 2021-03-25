@@ -5,16 +5,16 @@
 #include <QDate>
 #include <QTime>
 
-#include "GUI/frienditem.h"
-#include "GUI/friendmodel.h"
-#include "GUI/friendrequestitem.h"
-#include "GUI/friendrequestmodel.h"
-#include "GUI/messageitem.h"
-#include "GUI/messagemodel.h"
+#include "frienditem.h"
+#include "friendmodel.h"
+#include "friendrequestitem.h"
+#include "friendrequestmodel.h"
+#include "messageitem.h"
+#include "messagemodel.h"
 
-#include "dataaccessor.h"
-#include "clientcontroller.h"
-#include "signalredirector.h"
+#include "../dataaccessor.h"
+#include "../clientcontroller.h"
+#include "../signalredirector.h"
 
 class GUIManager : public QObject {
   Q_OBJECT

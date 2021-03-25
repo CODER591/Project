@@ -1,8 +1,8 @@
 #ifndef DATAACCESSOR_H
 #define DATAACCESSOR_H
 
-#include "..\DAL\sqldal.h"
-#include "..\Common\client_data_types.h"
+#include "../DAL/sqldal.h"
+#include "../Common/client_data_types.h"
 
 class DataAccessor {
  public:

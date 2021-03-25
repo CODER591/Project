@@ -9,7 +9,7 @@
 #include "friendsupdatemanager.h"
 #include "localserver.h"
 #include "servermanager.h"
-#include "hashhelper.h"
+#include "../Common/hashhelper.h"
 
 #include <QByteArray>
 #include <QNetworkInterface>

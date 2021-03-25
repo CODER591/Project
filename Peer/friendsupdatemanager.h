@@ -5,7 +5,7 @@
 #include <QTimer>
 #include <QUdpSocket>
 
-#include "client_data_types.h"
+#include "../Common/client_data_types.h"
 #include "../Parser&Structs/request_types.h"
 #include "../Parser&Structs/parser.h"
 #include "dataaccessor.h"

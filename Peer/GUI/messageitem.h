@@ -2,7 +2,7 @@
 #define MESSAGEITEM_H
 
 #include <QObject>
-#include "client_data_types.h"
+#include "../../Common/client_data_types.h"
 
 class MessageItem : public QObject {
   Q_OBJECT
