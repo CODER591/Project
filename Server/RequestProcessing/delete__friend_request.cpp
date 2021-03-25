@@ -5,7 +5,8 @@ DeleteFriendRequest::DeleteFriendRequest(QByteArray& request, DAL* d, QTcpSocket
 
   income_data_ = Parser::ParseAsFriendRequestInfo(request);
   PrepareResponse();
-  QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+  //QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+  QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address()).toString();
   QString logstring = IP + "::xxx";
   Logger::LogOut(logstring, request);
 

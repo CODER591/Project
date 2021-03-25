@@ -4,7 +4,8 @@ AddFriendRequest::AddFriendRequest(QByteArray &request, DAL *d, QTcpSocket *s)
     : AbstractRequest(d, s) {
   income_data_ = Parser::ParseAsFriendRequestInfo(request);
   PrepareResponse();
-  QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+  //QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+  QString IP = QHostAddress(client_socket_->peerAddress().toIPv4Address()).toString();
   QString logstring = IP + "::xxx";
   Logger::LogOut(logstring, request);
 }
@@ -45,7 +46,8 @@ bool AddFriendRequest::SendResponde() {
     QByteArray b = Parser::Empty_ToByteArray( (quint8)ServerRequest::FRIEND_REQUEST_SUCCEED);
     b.append(Parser::GetUnpossibleSequence());
 
-    QString ip = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+    //QString ip = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+    QString ip = QHostAddress(client_socket_->peerAddress().toIPv4Address()).toString();
     QString logstring_ = ip + "::xxx";
     Logger::LogOut(logstring_, b);
 
@@ -57,7 +59,8 @@ bool AddFriendRequest::SendResponde() {
     QTcpSocket output_socket;
     output_socket.connectToHost(requested_guy.ip, requested_guy.port);    
     
-    QString Logstring_ = QHostAddress(QHostAddress(requested_guy.ip).toIPv4Address(false)).toString()+ "::" 
+    //QString Logstring_ = QHostAddress(QHostAddress(requested_guy.ip).toIPv4Address(false)).toString()+ "::"
+    QString Logstring_ = QHostAddress(QHostAddress(requested_guy.ip).toIPv4Address()).toString()+ "::"
                                              + Logger::ConvertQuint32ToString(requested_guy.port);
     Logger::LogOut(Logstring_, send_addfriend_info_bytearr);
 
@@ -79,7 +82,8 @@ bool AddFriendRequest::SendResponde() {
     QByteArray b = Parser::Empty_ToByteArray((quint8)ServerRequest::FRIEND_REQUEST_FAILED);
     b.append(Parser::GetUnpossibleSequence());
 
-    QString Ip = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+    //QString Ip = QHostAddress(client_socket_->peerAddress().toIPv4Address(false)).toString();
+    QString Ip = QHostAddress(client_socket_->peerAddress().toIPv4Address()).toString();
     QString logstrin = Ip + "::" + Logger::ConvertQuint32ToString(sender_guy.port);
     Logger::LogOut(logstrin, b);
 
