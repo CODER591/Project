@@ -2,9 +2,9 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include "../Server/Exceptions/user_not_found.h"
+#include "../Exceptions/user_not_found.h"
 
-#include "client.h"
+#include "Client.h"
 #include "sqldal.h"
 // using namespace std;
 
